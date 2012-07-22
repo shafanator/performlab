@@ -1,0 +1,26 @@
+#header{
+	height: 60px;
+	background-color: #000000;
+	background-image:url('images/patientservtopnav_r1_c1.gif');
+	background-repeat:no-repeat;
+}
+#sidebar{
+	width: 123px;
+	height: 608px;
+	background-color: #000000;
+	float: left;
+}
+#content{
+	background-color:#003366;
+	width: 100%;
+	height: 608px;
+	color: #FFFFFF;
+	
+}
+#wrapper{
+	margin-left: 0px;
+	margin-right: 0px;
+	padding: 0;
+	background-color: #003366;
+
+}
