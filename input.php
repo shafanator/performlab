@@ -13,8 +13,33 @@
 <body>
 	<div id="wrapper">
 		<div id="header"></div>
-		<div id ="sidebar"></div>
-		<div id="content"></div>
+		<div id ="sidebar">
+			<a href="input.php">Input New Entry</a>
+			<a href="admin.php">Admin</a>
+			<a href="display.php">Display</a>
+		</div>
+		<div id="content">
+			<?php
+				if($_GET['sub']==true)
+					echo("Received!");
+			?>
+			<form name="input_new_entry" method="post" action="new_entry.php">
+			<table class= 'entry' width="100%" border="0" cellpadding="3" cellspacing="1">
+				<tr>
+					<td><strong>Key</strong></td>
+					<td><input name="key" type="text" id="key" size="52"></td>
+				</tr>
+				<tr>
+					<td valign="top"><strong>Location</strong></td>
+					<td><input name="loc" type= "text"id="loc" value= "<?php echo $_COOKIE["location"]; ?>"></td>
+				</tr>
+				<tr>
+					<td><input type="submit" name="Submit" value="Submit"></td>
+				</tr>
+			</table>
+			</form>
+			
+		</div>
 	</div>
 </body>
 </html>

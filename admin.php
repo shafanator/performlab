@@ -46,9 +46,25 @@ $result=mysql_query($sql);
 		<div id ="sidebar">
 			<a href="input.php">Input New Entry</a>
 			<a href="admin.php">Admin</a>
-			<a href="display.php">Display</a>
+			<a href="input.php">Display</a>
 		</div>
-		<div id="content"></div>
+		<div id="content">
+				<p>
+					The current Location is "<?php echo $_COOKIE["location"]; ?>"
+				<p>
+					Would you like to change it?
+				<form name="new_cookie" method="post" action="new_cookie.php">
+				<table class= 'entry' width="100%" border="0" cellpadding="3" cellspacing="1">
+					<tr>
+						<td><strong>Location</strong></td>
+						<td><input name="loc" type="text" id="loc" size="52" value= "<?php echo $_COOKIE["location"]; ?>"></td>
+					</tr>
+						<td><input type="submit" name="Submit" value="Submit"></td>
+					</tr>
+				</table>
+				</form>
+				
+		</div>
 	</div>
 </body>
 </html>

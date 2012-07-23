@@ -1,14 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
    "http://www.w3.org/TR/html4/strict.dtd">
-<!--
-	To Do List/ Ideas
-		load document for authentication
-			DB username
-			DB password
-			location
-		data input(separate page)
-		make css from website
--->
+
 <?php
 define("ROOT",dirname("..").'/');
 
@@ -20,7 +12,7 @@ require_once('config.inc.php');
 $host=$_DB['host'];
 $username=$_DB['user']; // Mysql username
 $password=$_DB['pass'];; // Mysql password
-$db_name=$_DB['database']; // Database name*/
+$db_name=$_DB['database']; // Database name
 $tbl_name="prod_info"; // Table name
 
 // Connect to server and select databse.
@@ -48,7 +40,9 @@ $result=mysql_query($sql);
 			<a href="admin.php">Admin</a>
 			<a href="display.php">Display</a>
 		</div>
-		<div id="content"></div>
+		<div id="content">
+			
+		</div>
 	</div>
 </body>
 </html>
