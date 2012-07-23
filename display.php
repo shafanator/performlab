@@ -45,24 +45,24 @@ $result=mysql_query($sql);
 				<tr>
 					<form name="show_all" method="post" action="display.php">
 						<td>Show All/Order By:</td>
-						<td><select>
+						<td><select name="order_by">
 							<option> </option>
 							<option value="loc">Location</option>
 							<option value="ord">Order Number</option>
 							<option value="time">Time</option>
 						</select></td>
-						<td><input type="submit" name="Submit" value="Search"></td>
+						<td><input type="submit" name="order" value="Search"></td>
 				</tr>
 				<tr>
 					<form name="search" method="post" action="display.php">
 						<td>Search By Order Number:</td>
 						<td><input name="key" type="text" id="key" size="52"></td>
-						<td><input type="submit" name="Submit" value="Search"></td>
+						<td><input type="submit" name="number" value="Search"></td>
 				</tr>
 				<tr>
 					<form name="only_loc" method="post" action="display.php">
 						<td>Show only:</td>
-						<td><select>
+						<td><select name="loc">
 							<option></option>
 						<?php
 							while($rows=mysql_fetch_array($result)){ // Start looping table row
@@ -72,7 +72,7 @@ $result=mysql_query($sql);
 						}
 						?>
 						</select></td>
-						<td><input type="submit" name="Submit" value="Search"></td>
+						<td><input type="submit" name="loc" value="Search"></td>
 				</tr>
 				</table>
 
