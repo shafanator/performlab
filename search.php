@@ -41,7 +41,7 @@ $result=mysql_query($sql);
 			<a href="display.php">Display</a>
 		</div>
 		<div id="content">
-			
+			<? var_dump($_POST)?>
 		</div>
 	</div>
 </body>

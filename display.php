@@ -43,7 +43,7 @@ $result=mysql_query($sql);
 		<div id="content">
 			<table class= 'entry' width="100%" border="0" cellpadding="3" cellspacing="1">
 				<tr>
-					<form name="search" method="post" action="search.php">
+					<form name="show_all" method="post" action="display.php">
 						<td>Show All/Order By:</td>
 						<td><select>
 							<option> </option>
@@ -54,34 +54,28 @@ $result=mysql_query($sql);
 						<td><input type="submit" name="Submit" value="Search"></td>
 				</tr>
 				<tr>
-					<form name="search" method="post" action="search.php">
+					<form name="search" method="post" action="display.php">
 						<td>Search By Order Number:</td>
 						<td><input name="key" type="text" id="key" size="52"></td>
 						<td><input type="submit" name="Submit" value="Search"></td>
 				</tr>
 				<tr>
-					<form name="search" method="post" action="search.php">
+					<form name="only_loc" method="post" action="display.php">
 						<td>Show only:</td>
 						<td><select>
 							<option></option>
 						<?php
-							$num=0;
-							<?php
 							while($rows=mysql_fetch_array($result)){ // Start looping table row
 						?>
-							<option value='<? echo $num; ?>'><? echo $rows['loc']; ?></option>
+							<option value='<? echo $rows['loc']; ?>'><? echo $rows['loc']; ?></option>
 						<?php
-							$num+=1;
 						}
 						?>
 						</select></td>
 						<td><input type="submit" name="Submit" value="Search"></td>
 				</tr>
 				</table>
-				<?
 
-				?>
-				
 				
 		</div>
 	</div>
